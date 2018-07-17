@@ -49,6 +49,12 @@
     opacity var(--message-transition-duration) ease-in;
   font-family: var(--message-font-family);
   backface-visibility: hidden;
+  &:after{
+    content: '';
+    display: block;
+    flex: 0 1 100%;
+    background-color: #afa;
+  }
 }
 
 .short {
@@ -63,18 +69,20 @@
 .info {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  padding-right: 20px;
+  width: 45px;
+  padding-right: 5px;
   flex: 0 0 auto;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  flex: 1 1 100%;
+  flex: 1 0 auto;
   align-content: flex-start;
   justify-content: flex-start;
   @apply --flex-fix;
+  border-radius: 10px 10px 10px 0;
+  background-color: #f8f7f5;
 }
 
 .header {
@@ -147,7 +155,7 @@
 }
 
 .hover {
-  background-color: var(--message-hover-background-color) !important;
+  /*background-color: var(--message-hover-background-color) !important;*/
 }
 
 .reactions {
